@@ -1,8 +1,8 @@
 <template>
     <div id="landing">
         <div id="navHeader">
-            <a href="">Projects</a>
-            <a href="">Skills</a>
+            <p @click="scrollToPage('projects')" >Projects</p>
+            <p @click="scrollToPage('skills')" >Skills</p>
         </div>
         <div id="infoWrapper">
             <p>Samson Nguyen</p>
@@ -18,7 +18,7 @@
                     <img src="../assets/GMAIL.svg" alt="gmail icon" title="Gmail">
                 </a>
                 <a href="https://google.com">
-                    <img src="../assets/black_resume.svg" alt="resume icon" title="Resume">
+                    <img src="../assets/RESUME.svg" alt="resume icon" title="Resume">
                 </a>
             </div>
         </div>
@@ -27,7 +27,15 @@
 
 <script>
 export default {
-    name: 'Landing'
+    name: 'Landing',
+    methods: {
+        scrollToPage(element) {
+            const page = document.getElementById(element);
+            page.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
+    }
 }
 </script>
 
@@ -96,9 +104,9 @@ export default {
         justify-content: flex-end;
         align-items: center;
         padding: 0 25px;
-        > a {
+        > p {
             color: white;
-            text-decoration: none;
+            cursor: pointer;
             font: {
                 size: 2.5em;
                 weight: 200;

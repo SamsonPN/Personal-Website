@@ -2,17 +2,21 @@
   <div id="app">
     <LandingPage />
     <ProjectsPage />
+    <SkillsPage />
   </div>
 </template>
 
 <script>
 import LandingPage from './components/Landing';
 import ProjectsPage from './components/Projects';
+import SkillsPage from './components/Skills';
+
 export default {
   name: 'App',
   components: {
     LandingPage,
-    ProjectsPage
+    ProjectsPage,
+    SkillsPage
   }
 }
 </script>

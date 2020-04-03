@@ -1,17 +1,17 @@
 <template>
-  <div id="projects">
-      Projects
+  <div id="skills">
+      Skills
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Landing'
+    name: 'Skills'
 }
 </script>
 
 <style scoped lang="scss">
-    #projects {
+    #skills {
         width: 100%;
         min-height: 100vh;
         color: white;

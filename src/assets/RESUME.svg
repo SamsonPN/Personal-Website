@@ -27,6 +27,7 @@
             marker="none" 
             visibility="visible" 
             display="inline" 
-            overflow="visible"/>
+            overflow="visible"
+            opacity="0.9"/>
     </g>
 </svg>
