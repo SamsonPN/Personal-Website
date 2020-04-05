@@ -25,9 +25,8 @@ export default {
         color: white;
         background-color: var(--primary-color);
         > h1 {
-            width: 100%;
+            width: calc(100% - 50px);
             margin: 0 25px;
-            padding: 5px 0;
             border-bottom: 3px solid white;
             font: {
                 size: 4em;

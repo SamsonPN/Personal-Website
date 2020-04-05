@@ -1,7 +1,7 @@
 <template>
     <div id="demo">
         <a :href="demo" >
-            Youtube Demo
+             YouTube Demo
         </a>
         <a :href="source" >
             &lt;/&gt; View Source
@@ -19,28 +19,33 @@ export default {
 <style scoped lang="scss">
 
     #demo {
+        width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        margin-bottom: 25px;
         > a {
             color: white;
-            text-decoration: none;
             border: 1.5px solid white;
             border-radius: 15px;
             padding: 10px;
+            text: {
+                align: center;
+                decoration: none;
+            }
             cursor: pointer;
             font: {
-                size: 2em;
+                size: 2.25em;
                 weight: 200;
                 style: italic;
             }
             &:first-child {
                 background-color: #0D0181;
+                margin-right: 15px;
             }
             &:last-child {
                 background-color: var(--secondary-color);
             }
             &:hover {
-                opacity: 0.85;
+                opacity: 0.75;
             }
         }
     }

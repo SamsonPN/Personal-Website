@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <!-- <LandingPage /> -->
+    <LandingPage />
     <ProjectsPage />
     <!-- <SkillsPage /> -->
   </div>
 </template>
 
 <script>
-// import LandingPage from './components/Landing';
+import LandingPage from './components/Landing';
 import ProjectsPage from './components/Projects/Projects';
 // import SkillsPage from './components/Skills';
 
 export default {
   name: 'App',
   components: {
-    // LandingPage,
+    LandingPage,
     ProjectsPage,
     // SkillsPage
   }

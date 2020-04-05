@@ -1,8 +1,8 @@
 <template>
     <div id="landing">
         <div id="navHeader">
-            <p @click="scrollToPage('projects')" >Projects</p>
-            <p @click="scrollToPage('skills')" >Skills</p>
+            <p @click="scrollToPage('projects')">Projects</p>
+            <p @click="scrollToPage('skills')">Skills</p>
         </div>
         <div id="infoWrapper">
             <p>Samson Nguyen</p>
@@ -49,7 +49,7 @@ export default {
         align-items: center;
         color: white;
         background: {
-            image: url('../assets/landing-image.jpg');
+            image: url('https://res.cloudinary.com/sotasamson96/image/upload/v1586053573/Personal%20Website/landing-image_sniipd.jpg');
             size: cover;
             repeat: no-repeat;
             position: center;
@@ -104,6 +104,7 @@ export default {
         justify-content: flex-end;
         align-items: center;
         padding: 0 25px;
+        z-index: 1;
         > p {
             color: white;
             cursor: pointer;
