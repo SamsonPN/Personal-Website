@@ -2,15 +2,19 @@
     <div id="projects">
         <h1>Projects</h1>
         <ProjectOne />
+        <ProjectTwo />
   </div>
 </template>
 
 <script>
 import ProjectOne from './ProjectOne';
+import ProjectTwo from './ProjectTwo';
+
 export default {
     name: 'Landing',
     components: {
-        ProjectOne
+        ProjectOne,
+        ProjectTwo
     }
 }
 </script>

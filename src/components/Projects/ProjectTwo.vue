@@ -1,12 +1,12 @@
 <template>
-    <div id="ProjectOne" >
+    <div id="ProjectTwo" >
         <div class="projectWrapper">
             <div class="vidWrapper">
                 <video :src="video" autoplay loop muted></video>
             </div>
             <div class="projectInfo">
-                <a href="https://abetteruhealth.com" title="Go to A Better U?">A Better U</a>
-                <p>Health and Fitness Application</p>
+                <a href="https://legion-board.netlify.com" title="Go to Legion Grid?">Legion Grid</a>
+                <p>MapleStory Legion Simulator</p>
                 <Demos :demo="demo" :source="source" />
                 <div class="tagWrapper">
                     <Tag v-for="tech in stack" :key="tech" :tag="tech"/>
@@ -56,7 +56,7 @@ import Demos from './ProjectsDemo';
 import Tag from '../TechTag';
 
 export default {
-    name: 'ProjectOne',
+    name: 'ProjectTwo',
     components: {
         Demos,
         Tag
@@ -64,16 +64,16 @@ export default {
     data() {
         return {
             demo: 'https://youtu.be/xnnKvFZoiVo',
-            source: 'https://github.com/SotaSamson96/A-Better-U',
-            stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-            video: 'https://res.cloudinary.com/sotasamson96/video/upload/v1586055782/Personal%20Website/ABU_Short_btkni4.mp4'
+            source: 'https://github.com/SotaSamson96/Legion',
+            stack: ['Vue.js', 'Node.js', 'Express', 'PostgresQL'],
+            video: 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4'
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
-    #ProjectOne {
+    #ProjectTwo {
         width: 100%;
         display: flex;
         flex-direction: column;

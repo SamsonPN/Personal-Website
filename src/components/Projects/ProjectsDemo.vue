@@ -21,6 +21,7 @@ export default {
     #demo {
         width: 100%;
         display: flex;
+        align-items: center;
         margin-bottom: 25px;
         > a {
             color: white;
