@@ -155,7 +155,7 @@ export default {
         border: 2px solid white;
         border-radius: 10px;
         background-color: #358101;
-        > #tag {
+        > .tag {
             margin: 5px;
         }
     }

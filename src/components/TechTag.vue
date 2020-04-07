@@ -1,5 +1,5 @@
 <template>
-  <div id="tag">
+  <div class="tag">
       {{tag}}
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    #tag {
+    .tag {
         display: flex;
         justify-content: center;
         border: 1.5px solid black;
