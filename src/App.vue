@@ -2,21 +2,21 @@
   <div id="app">
     <LandingPage />
     <ProjectsPage />
-    <!-- <SkillsPage /> -->
+    <SkillsPage />
   </div>
 </template>
 
 <script>
 import LandingPage from './components/Landing';
 import ProjectsPage from './components/Projects/Projects';
-// import SkillsPage from './components/Skills';
+import SkillsPage from './components/Skills';
 
 export default {
   name: 'App',
   components: {
     LandingPage,
     ProjectsPage,
-    // SkillsPage
+    SkillsPage
   }
 }
 </script>
@@ -44,6 +44,7 @@ export default {
     display: flex;
     flex-direction: column;
     font-family: var(--primary-font);
+    background-color: var(--primary-color);
   }
 
 </style>

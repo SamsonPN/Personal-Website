@@ -63,7 +63,7 @@ export default {
     },
     data() {
         return {
-            demo: 'https://youtu.be/xnnKvFZoiVo',
+            demo: 'https://youtu.be/lpfKuMfuXRI',
             source: 'https://github.com/SotaSamson96/Legion',
             stack: ['Vue.js', 'Node.js', 'Express', 'PostgresQL'],
             video: 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4'
