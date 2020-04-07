@@ -9,16 +9,28 @@
             <p>Full-Stack Developer</p>
             <div id="socialMediaWrapper">
                 <a href="https://github.com/SotaSamson96">
-                    <img src="../assets/GITHUB.svg" alt="github icon" title="Github">
+                    <img 
+                        src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/GITHUB_a6qbr3.svg" 
+                        alt="github icon" 
+                        title="Github">
                 </a>
                 <a href="http://www.linkedin.com/in/samson-nguyen/">
-                    <img src="../assets/LINKEDIN.svg" alt="linkedin icon" title="LinkedIn">
+                    <img 
+                        src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/LINKEDIN_qvmoab.svg" 
+                        alt="linkedin icon" 
+                        title="LinkedIn">
                 </a>
                 <a href="mailto:sapnguyen@ucdavis.edu">
-                    <img src="../assets/GMAIL.svg" alt="gmail icon" title="Gmail">
+                    <img 
+                        src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/GMAIL_t8tle1.svg" 
+                        alt="gmail icon" 
+                        title="Gmail">
                 </a>
                 <a href="https://google.com">
-                    <img src="../assets/RESUME.svg" alt="resume icon" title="Resume">
+                    <img 
+                        src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/RESUME_kgzpmp.svg" 
+                        alt="resume icon" 
+                        title="Resume">
                 </a>
             </div>
         </div>
@@ -60,6 +72,8 @@ export default {
         display: flex;
         flex-direction: column;
         > p {
+            animation-duration: 1.25s;
+            animation-name: slidein;
             margin-bottom: 5px;
             &:first-child {
                 font: {
@@ -78,9 +92,17 @@ export default {
         }
     }
 
+    @keyframes slidein {
+        from {
+            transform: translateY(-100%);
+        }
+    }
+
     #socialMediaWrapper {
         display: flex;
         align-items: center;
+        animation-duration: 1.25s;
+        animation-name: slideright;
         > a {
             height: 100%;
             width: 12.5%;
@@ -96,6 +118,12 @@ export default {
         }
     }
 
+    @keyframes slideright {
+        from {
+            transform: translateX(-100%);
+        }
+    }
+
     #navHeader {
         width: 100%;
         position: absolute;
@@ -105,6 +133,8 @@ export default {
         align-items: center;
         padding: 0 25px;
         z-index: 1;
+        animation-duration: 1s;
+        animation-name: slidein;
         > p {
             color: white;
             cursor: pointer;

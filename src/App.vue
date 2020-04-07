@@ -31,6 +31,7 @@ export default {
   }
   html, body {
     font-size: 100%;
+    background-color: var(--primary-color);
   }
 
   * {
@@ -44,7 +45,7 @@ export default {
     display: flex;
     flex-direction: column;
     font-family: var(--primary-font);
-    background-color: var(--primary-color);
+    cursor: url('./assets/WD.png'), auto;
   }
 
 </style>
