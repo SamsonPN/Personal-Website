@@ -74,7 +74,7 @@ export default {
         margin-top: 75px;
         > p {
             animation: {
-                duration: 1.25s;
+                duration: 2s;
                 name: slidein;
             }
             margin-bottom: 5px;
@@ -96,8 +96,11 @@ export default {
     }
 
     @keyframes slidein {
-        from {
-            transform: translateY(-500%);
+        0% {
+            transform: translateY(-1000%);
+        }
+        20% {
+            transform: translateY(-1000%);
         }
     }
 
@@ -105,7 +108,8 @@ export default {
         display: flex;
         align-items: center;
         animation: {
-            duration: 1.25s;
+            // duration: 1.25s;
+            duration: 2s;
             name: slideright;
         }
         > a {
@@ -124,7 +128,10 @@ export default {
     }
 
     @keyframes slideright {
-        from {
+        0% {
+            transform: translateX(-100%);
+        }
+        20% {
             transform: translateX(-100%);
         }
     }
