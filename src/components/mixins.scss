@@ -1,6 +1,6 @@
 
 @mixin for-projects-desktop {
-    @media only screen and (max-width: 84.625em) {
+    @media only screen and (max-width: 84.625em) { //1354
         .projectInfo {
             > a {
                 line-height: 1;
@@ -16,7 +16,7 @@
         }
     }
 
-    @media only screen and (max-width: 66.313em) {
+    @media only screen and (max-width: 66.313em) { //1061
         #ProjectOne, #ProjectTwo {
             > .projectWrapper {
                 width: 100%;
@@ -37,9 +37,18 @@
         .tagWrapper {
             margin-bottom: 25px;
         }
+
+        .listWrapper {
+            > h3 {
+                font-size: 2.75em;
+            }
+            > ul {
+                font-size: 2em;
+            }
+        }
     }
 
-    @media only screen and (max-width: 42.375em) {
+    @media only screen and (max-width: 42.375em) { //678px
         .projectInfo {
             align-items: center;
             text-align: center;
@@ -52,7 +61,7 @@
         }
     }
 
-    @media only screen and (max-width: 28.125em) {
+    @media only screen and (max-width: 28.125em) { //450px
         #ProjectOne, #ProjectTwo {
             > .projectWrapper > .vidWrapper {
                     width: calc(100% - 10px);
@@ -70,6 +79,13 @@
         }
         .listWrapper {
             width: calc(100% - 10px);
+            > h3 {
+                font-size: 2em;
+            }
+            > ul {
+                font-size: 1.5em;
+                margin-left: 0px;
+            }
         }
     }
 

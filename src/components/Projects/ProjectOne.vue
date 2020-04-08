@@ -151,7 +151,7 @@ export default {
         list-style-position: inside;
         background-color: rgba(0,0,0, 0.5);
         > h3 {
-            font-size: 1.75em;
+            font-size: 2.25em;
         }
         > ul {
             list-style-image: url('../../assets/terminal.svg');
@@ -159,12 +159,14 @@ export default {
             margin-bottom: 10px;
             font: {
                 family: var(--secondary-font);
-                size: 1.25em;
+                size: 1.75em;
+                weight: 100;
+                style: italic;
             }
             width: 100%;
             > li {
                 width: calc(100% - 20px);
-                vertical-align: text-top;
+                margin-bottom: 10px;
             }
         }
     }

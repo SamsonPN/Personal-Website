@@ -54,7 +54,7 @@ export default {
 <style scoped lang="scss">
     #landing {
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -71,6 +71,7 @@ export default {
     #infoWrapper {
         display: flex;
         flex-direction: column;
+        margin-top: 75px;
         > p {
             animation: {
                 duration: 1.25s;
