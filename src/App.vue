@@ -23,8 +23,8 @@ export default {
 
 <style lang="scss">
   :root {
-    --primary-font: Nunito, sans-serif;
-    --secondary-font: Roboto, sans-serif;
+    --primary-font: 'Nunito Sans', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
     --primary-color: #013581;
     --secondary-color: #810175;
 

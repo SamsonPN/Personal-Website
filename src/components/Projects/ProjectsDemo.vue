@@ -50,4 +50,48 @@ export default {
             }
         }
     }
+
+    @media only screen and (max-width: 84.625em) {
+        #demo {
+            flex-direction: column;
+            > a {
+                width: 100%;
+                &:first-child{
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 66.313em) {
+        #demo {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            > a {
+                padding: 10px 5px;
+                width: 48%;
+                white-space: nowrap;
+                &:first-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 42.375em) {
+        #demo {
+            flex-direction: column;
+            > a {
+                width: 100%;
+                &:first-child {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    
 </style>

@@ -72,8 +72,10 @@ export default {
         display: flex;
         flex-direction: column;
         > p {
-            animation-duration: 1.25s;
-            animation-name: slidein;
+            animation: {
+                duration: 1.25s;
+                name: slidein;
+            }
             margin-bottom: 5px;
             &:first-child {
                 font: {
@@ -94,15 +96,17 @@ export default {
 
     @keyframes slidein {
         from {
-            transform: translateY(-100%);
+            transform: translateY(-500%);
         }
     }
 
     #socialMediaWrapper {
         display: flex;
         align-items: center;
-        animation-duration: 1.25s;
-        animation-name: slideright;
+        animation: {
+            duration: 1.25s;
+            name: slideright;
+        }
         > a {
             height: 100%;
             width: 12.5%;
@@ -133,13 +137,15 @@ export default {
         align-items: center;
         padding: 0 25px;
         z-index: 1;
-        animation-duration: 1s;
-        animation-name: slidein;
+        animation: {
+            duration: 1s;
+            name: slidein;
+        }
         > p {
             color: white;
             cursor: pointer;
             font: {
-                size: 2.5em;
+                size: 2.75em;
                 weight: 200;
                 style: italic;
             }
@@ -149,6 +155,69 @@ export default {
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    @media only screen and (max-width: 50em) {
+        #infoWrapper > p{
+            &:first-child {
+                font-size: 5em;
+            }
+            &:nth-child(2) {
+                font-size: 3em;
+            }
+        }
+
+        #navHeader > p{
+            font-size: 2.25em;
+        }
+    }
+
+    @media only screen and (max-width: 37.188em) {
+        #infoWrapper {
+            align-items: center;
+            > p {
+                text-align: center;
+                &:first-child {
+                    font-size: 3.5em;
+                }
+                &:nth-child(2) {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        #socialMediaWrapper {
+            justify-content: space-around;
+            width: 100%;
+            > a {
+                margin: 0;
+            }
+        }
+
+        #navHeader {
+            padding: 0 10px;
+        }
+    }
+
+    @media only screen and (max-width: 26em) {
+        #infoWrapper > p {
+            &:first-child {
+                font-size: 25vw;
+            }
+            &:nth-child(2) {
+                font-size: 10vw;
+            }
+        }
+
+        #socialMediaWrapper > a {
+            width: 17.5%;
+        }
+    }
+
+    @media only screen and (max-width: 20em) {
+        #navHeader {
+            justify-content: center;
         }
     }
 </style>

@@ -17,20 +17,19 @@
             <h3>Features</h3>
             <ul class="featuresList">
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Est sit amet facilisis magna.
+                    Allows players to drag and drop tetris pieces on the grid
                 </li>
                 <li>
-                    Sed ullamcorper morbi tincidunt ornare massa eget egestas. 
-                    Viverra suspendisse potenti nullam ac tortor.
+                    Tetris pieces can be rotated clockwise and counterclockwise, as well
+                    as flipped vertically and horizontally
                 </li>
                 <li>
-                    Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. 
+                    Has a variety of options to change the color of the pieces and 
+                    grid, add gridlines, and change the pieces' shapes
                 </li>
                 <li>
-                    Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. 
-                    Sed euismod nisi porta lorem. Ut eu sem integer vitae justo.
+                    Positions of the pieces on the grid are saved and players
+                    can have multiple presets to save to
                 </li>
             </ul>
             <h3>Challenges</h3>
@@ -73,6 +72,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../mixins.scss';
+
     #ProjectTwo {
         width: 100%;
         display: flex;
@@ -159,4 +160,6 @@ export default {
             margin: 5px;
         }
     }
+
+    @include for-projects-desktop;
 </style>

@@ -2,14 +2,14 @@
   <div id="skills">
         <h1>Skills</h1>
         <div class="skillsBar">
-            <button
+            <div
                 class="skillBtn"
                 v-for="skill in skills"
                 :id="skill + 'Btn'"
                 :key="skill"
                 @click="selectSkill(skill)">
                 {{skill}}
-            </button>
+            </div>
         </div>
         <div id="tagsGrid">
             <Tag 
@@ -121,19 +121,23 @@ export default {
         display: flex;
         flex-wrap: wrap;
         margin-top: 25px;
-        > button {
+        > div {
             outline: none;
             background-color: white;
             border: 2px solid #707070;
             border-radius: 50px;
-            margin: 5px 14px;
+            margin-left: 15px;
+            margin-bottom: 10px;
             padding: 5px 30px;
             color: var(--secondary-color);
             cursor: pointer;
             font: {
-                size: 4em;
+                size: 3.5em;
                 weight: 200;
                 style: italic
+            }
+            &:last-child {
+                margin-right: 0;
             }
             &:hover {
                 opacity: 0.85;
@@ -147,17 +151,73 @@ export default {
     }
 
     #tagsGrid {
+        position: relative;
         width: calc(100% - 50px);
         display: flex;
-        flex-wrap: wrap; // as long as a height isn't set, this will wrap it
-        padding: 5px;
+        flex-wrap: wrap;
         border: 2px solid white;
         border-radius: 10px;
-        margin-top: 25px;
+        margin-top: 15px;
+        padding: 10px;
         background-color: #358101;
         > .tag {
-            font-size: 3.5em;
-            margin: 5px;
+            font-size: 3em;
+            margin: 7.5px;
+        }
+    }
+
+    @media only screen and (max-width: 80.938em) {
+        .skillsBar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            > div {
+                text-align: center;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 65.313em) {
+        .skillsBar {
+            grid-template-columns: repeat(2, 1fr);
+            > div {
+                font-size: 5.5vw;
+            }
+        }
+
+        #tagsGrid > .tag {
+            font-size: 2em;
+        }
+    }
+
+    @media only screen and (max-width: 34.688em) {
+        .skillsBar {
+            margin-top: 10px;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            > div {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        #tagsGrid {
+            margin-top: 0px;
+            > .tag {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+
+    @media only screen and (max-width: 28.125em) {
+        #skills {
+            align-items: center;
+            > h1 {
+                width: calc(100% - 10px);
+            }
+        }
+
+        .skillsBar, #tagsGrid {
+            width: calc(100% - 10px);
         }
     }
 </style>

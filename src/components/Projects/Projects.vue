@@ -39,4 +39,13 @@ export default {
             }
         }
     }
+
+    @media only screen and (max-width: 28.125em) {
+        #projects {
+            align-items: center;
+            > h1 {
+                width: calc(100% - 10px);
+            }
+        }
+    }
 </style>

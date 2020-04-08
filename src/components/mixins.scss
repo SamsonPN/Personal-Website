@@ -1,0 +1,77 @@
+
+@mixin for-projects-desktop {
+    @media only screen and (max-width: 84.625em) {
+        .projectInfo {
+            > a {
+                line-height: 1;
+                font-size: 4.25em;
+            }
+            > p {
+                font-size: 2.125em;
+            }
+        }
+
+        .tagWrapper > .tag {
+            font-size: 1.25em;
+        }
+    }
+
+    @media only screen and (max-width: 66.313em) {
+        #ProjectOne, #ProjectTwo {
+            > .projectWrapper {
+                width: 100%;
+                flex-direction: column-reverse;
+                align-items: center;
+                > .vidWrapper {
+                    width: calc(100% - 50px);
+                }
+            }
+        }
+
+        .projectInfo {
+            width: calc(100% - 50px);
+            > a { font-size: 6em; }
+            > p { font-size: 3em; }
+        }
+
+        .tagWrapper {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media only screen and (max-width: 42.375em) {
+        .projectInfo {
+            align-items: center;
+            text-align: center;
+            > a { 
+                font-size: 4.5em; 
+            }
+            > p {
+                font-size: 2.25em; 
+            }
+        }
+    }
+
+    @media only screen and (max-width: 28.125em) {
+        #ProjectOne, #ProjectTwo {
+            > .projectWrapper > .vidWrapper {
+                    width: calc(100% - 10px);
+            }
+        }
+
+        .projectInfo {
+            width: calc(100% - 10px);
+            > a {
+                font-size: 4em;
+            }
+            > p {
+                font-size: 1.75em;
+            }
+        }
+        .listWrapper {
+            width: calc(100% - 10px);
+        }
+    }
+
+
+}

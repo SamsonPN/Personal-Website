@@ -17,20 +17,26 @@
             <h3>Features</h3>
             <ul class="featuresList">
                 <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Est sit amet facilisis magna.
+                    Create any workout routine from 1000 available exercises such as
+                    the squat, bench press, and deadlift
                 </li>
                 <li>
-                    Sed ullamcorper morbi tincidunt ornare massa eget egestas. 
-                    Viverra suspendisse potenti nullam ac tortor.
+                    Track workouts for the day by choosing a routine and putting in
+                    weight, repetition, and set information
                 </li>
                 <li>
-                    Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. 
+                    Provides Calorie and Macronutrient calculators for users 
+                    to determine nutritional needs
                 </li>
                 <li>
-                    Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. 
-                    Sed euismod nisi porta lorem. Ut eu sem integer vitae justo.
+                    Search for various foods and view full nutrition report
+                </li>
+                <li>
+                    Create, update, or delete facebook-like status updates to track fitness journey
+                </li>
+                <li>
+                    Able to upload photos/videos for each status that will
+                    be delivered quickly through a CDN
                 </li>
             </ul>
             <h3>Challenges</h3>
@@ -73,6 +79,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../mixins.scss';
+
     #ProjectOne {
         width: 100%;
         display: flex;
@@ -88,35 +96,6 @@ export default {
                     max-width: 100%;
                     border-radius: 10px;
                 }
-            }
-        }
-    }
-
-    .listWrapper {
-        width: calc(100% - 50px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-bottom: 25px;
-        padding: 10px;
-        border: 3px solid white;
-        border-radius: 10px;
-        list-style-position: inside;
-        background-color: rgba(0,0,0, 0.5);
-        > h3 {
-            font-size: 1.75em;
-        }
-        > ul {
-            list-style-image: url('../../assets/terminal.svg');
-            margin-left: 15px;
-            margin-bottom: 10px;
-            font: {
-                family: var(--secondary-font);
-                size: 1.25em;
-            }
-            width: 100%;
-            > li {
-                vertical-align: text-top;
             }
         }
     }
@@ -150,7 +129,7 @@ export default {
     .tagWrapper {
         width: 100%;
         display: flex;
-        flex-wrap: wrap; // as long as a height isn't set, this will wrap it
+        flex-wrap: wrap;
         padding: 5px;
         border: 2px solid white;
         border-radius: 10px;
@@ -159,4 +138,36 @@ export default {
             margin: 5px;
         }
     }
+
+    .listWrapper {
+        width: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        padding: 10px;
+        border: 3px solid white;
+        border-radius: 10px;
+        list-style-position: inside;
+        background-color: rgba(0,0,0, 0.5);
+        > h3 {
+            font-size: 1.75em;
+        }
+        > ul {
+            list-style-image: url('../../assets/terminal.svg');
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font: {
+                family: var(--secondary-font);
+                size: 1.25em;
+            }
+            width: 100%;
+            > li {
+                width: calc(100% - 20px);
+                vertical-align: text-top;
+            }
+        }
+    }
+
+    @include for-projects-desktop;
 </style>
