@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../mixins.scss';
     #projects {
         width: 100%;
         min-height: 100vh;
@@ -37,6 +38,12 @@ export default {
                 weight: 200;
                 style: italic;
             }
+        }
+    }
+
+    @include for-desktop-large {
+        #projects > h1 {
+            font-size: 5vw;
         }
     }
 

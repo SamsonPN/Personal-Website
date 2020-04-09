@@ -52,6 +52,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import './mixins.scss';
+
     #landing {
         width: 100%;
         min-height: 100vh;
@@ -108,7 +110,6 @@ export default {
         display: flex;
         align-items: center;
         animation: {
-            // duration: 1.25s;
             duration: 2s;
             name: slideright;
         }
@@ -129,10 +130,10 @@ export default {
 
     @keyframes slideright {
         0% {
-            transform: translateX(-100%);
+            transform: translateX(-300%);
         }
         20% {
-            transform: translateX(-100%);
+            transform: translateX(-300%);
         }
     }
 
@@ -163,6 +164,22 @@ export default {
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    @include for-desktop-large {
+        #infoWrapper {
+            > p {
+                &:first-child {
+                    font-size: 8.5vw;
+                }
+                &:nth-child(2) {
+                    font-size: 6vw;
+                }
+            }
+        }
+        #navHeader > p {
+            font-size: 3vw;
         }
     }
 

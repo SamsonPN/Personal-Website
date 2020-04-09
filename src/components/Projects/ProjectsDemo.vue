@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../mixins.scss';
 
     #demo {
         width: 100%;
@@ -48,6 +49,14 @@ export default {
             &:hover {
                 opacity: 0.75;
             }
+        }
+    }
+
+    @include for-desktop-large {
+        #demo > a {
+            font-size: 2.75vw;
+            border-radius: 20px;
+            border-width: 2.5px;
         }
     }
 

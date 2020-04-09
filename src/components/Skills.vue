@@ -95,6 +95,8 @@ export default {
 
 
 <style scoped lang="scss">
+    @import './mixins.scss';
+
     #skills {
         width: 100%;
         min-height: 100vh;
@@ -160,9 +162,28 @@ export default {
         margin-top: 15px;
         padding: 10px;
         background-color: #358101;
+        transition: height 0.25s;
         > .tag {
             font-size: 3em;
             margin: 7.5px;
+        }
+    }
+
+    @include for-desktop-large {
+        #skills > h1 {
+            font-size: 5vw;
+        }
+
+        .skillsBar > div {
+            font-size: 4vw;
+            border-radius: 75px;
+            border-width: 3px;
+        }
+
+        #tagsGrid > .tag {
+            font-size: 4vw;
+            margin: 15px;
+            border-radius: 10px;
         }
     }
 

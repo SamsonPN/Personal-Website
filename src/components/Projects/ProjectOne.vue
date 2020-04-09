@@ -87,9 +87,10 @@ export default {
         flex-direction: column;
         align-items: center;
         > .projectWrapper {
-            margin: 25px;
+            width: calc(100% - 50px);
             display: flex;
             justify-content: space-between;
+            margin: 25px 0px;
             > .vidWrapper {
                 width: 54%;
                 > video {

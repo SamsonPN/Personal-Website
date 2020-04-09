@@ -1,5 +1,54 @@
+@mixin for-desktop-large {
+    @media only screen and (min-width: 120em) { //1920
+        @content;
+    }
+}
+
+@mixin for-desktop-xlarge {
+    @media only screen and (min-width: 160em) { //2560
+        @content;
+    }
+}
 
 @mixin for-projects-desktop {
+
+    @include for-desktop-large {
+        .projectInfo {
+            > a {
+                font-size: 8vw;
+                margin-bottom: 25px;
+            }
+            > p {
+                font-size: 3vw;
+            }
+        }
+
+        .tagWrapper {
+            border-width: 2.5px;
+            > .tag{
+                font-size: 2.5vw;
+                border-width: 2px;
+            }
+        }
+
+        .listWrapper {
+            padding: 15px;
+            > h3 {
+                font-size: 2.75vw;
+            }
+            > ul {
+                font-size: 2.25vw;
+                list-style-image: url('../../assets/terminal-large.svg');
+            }
+        }
+    }
+
+    @include for-desktop-xlarge {
+        .listWrapper > ul{
+            list-style-image: url('../../assets/terminal-xlarge.svg');
+        }
+    }
+
     @media only screen and (max-width: 84.625em) { //1354
         .projectInfo {
             > a {
@@ -88,6 +137,4 @@
             }
         }
     }
-
-
 }
