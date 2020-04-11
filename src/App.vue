@@ -17,9 +17,6 @@ export default {
     LandingPage,
     ProjectsPage,
     SkillsPage
-  },
-  mounted() {
-    this.$router.push({name: 'App'});
   }
 }
 </script>
