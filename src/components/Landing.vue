@@ -116,14 +116,14 @@ export default {
         > a {
             height: 100%;
             width: 12.5%;
+            > img {
+                max-width: 100%;
+            }
             &:not(:last-child) {
                 margin-right: 10px;
             }
             &:hover {
                 opacity: 0.75;
-            }
-            > img {
-                max-width: 100%;  
             }
         }
     }

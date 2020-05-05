@@ -1,17 +1,17 @@
 <template>
-    <div id="demo">
+    <div id="ProjectsDemo">
         <a :href="demo" >
-             YouTube Demo
+             &#9654; Demo
         </a>
         <a :href="source" >
-            &lt;/&gt; View Source
+            &lt;/&gt; Source
         </a>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Demo',
+    name: 'ProjectsDemo',
     props: {
         demo: {
             type: String,
@@ -28,16 +28,18 @@ export default {
 <style scoped lang="scss">
     @import '../../assets/sass/mixins.scss';
 
-    #demo {
+    #ProjectsDemo {
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
         > a {
-            color: white;
+            width: 100%;
             border: 1.5px solid white;
-            border-radius: 15px;
-            padding: 10px;
+            border-radius: 1rem;
+            padding: 0.625rem;
+            color: white;
             text: {
                 align: center;
                 decoration: none;
@@ -50,7 +52,7 @@ export default {
             }
             &:first-child {
                 background-color: #0D0181;
-                margin-right: 15px;
+                margin-bottom: 0.75rem;
             }
             &:last-child {
                 background-color: var(--secondary-color);
@@ -62,33 +64,38 @@ export default {
     }
 
     @include for-desktop-large {
-        #demo > a {
+        #ProjectsDemo > a {
             font-size: 2.75vw;
-            border-radius: 20px;
-            border-width: 2.5px;
-        }
-    }
-
-    @media only screen and (max-width: 84.625em) {
-        #demo {
-            flex-direction: column;
-            > a {
-                width: 100%;
-                &:first-child{
-                    margin-right: 0;
-                    margin-bottom: 20px;
-                }
+            border: {
+                radius: 1.25rem;
+                width: 2.5px;
+            }
+            &:first-child {
+                margin-bottom: 1.5rem;
             }
         }
     }
 
-    @media only screen and (max-width: 66.313em) {
-        #demo {
+    @include for-desktop-xlarge {
+        #ProjectsDemo > a {
+            font-size: 2.75vw;
+            border: {
+                radius: 1.75rem;
+                width: 5px;
+            }
+            &:first-child {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    @include for-desktop-only {
+        #ProjectsDemo {
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             > a {
-                padding: 10px 5px;
+                padding: 0.625rem 0.3rem;
                 width: 48%;
                 white-space: nowrap;
                 &:first-child {
@@ -98,14 +105,14 @@ export default {
         }
     }
 
-
-    @media only screen and (max-width: 42.375em) {
-        #demo {
+    @include for-mobile-only {
+        #ProjectsDemo {
             flex-direction: column;
             > a {
                 width: 100%;
+                font-size: 6vw;
                 &:first-child {
-                    margin-bottom: 15px;
+                    margin-bottom: 1rem;
                 }
             }
         }

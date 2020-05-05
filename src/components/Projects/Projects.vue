@@ -22,7 +22,7 @@ export default {
     @import '../../assets/sass/mixins.scss';
     
     #projects {
-        width: 100%;
+        width: calc(100% - 50px);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -30,11 +30,10 @@ export default {
         color: white;
         background-color: var(--primary-color);
         > h1 {
-            width: calc(100% - 50px);
-            margin: 0 25px;
+            width: 100%;
             border-bottom: 3px solid white;
             font: {
-                size: 4em;
+                size: 5em;
                 weight: 200;
                 style: italic;
             }
@@ -43,16 +42,15 @@ export default {
 
     @include for-desktop-large {
         #projects > h1 {
-            font-size: 5vw;
+            font-size: 7vw;
         }
     }
 
-    @media only screen and (max-width: 28.125em) {
+    @include for-mobile-only {
         #projects {
+            width: 95%;
             align-items: center;
-            > h1 {
-                width: calc(100% - 10px);
-            }
+            > h1 { font-size: 15vw; }
         }
     }
 </style>

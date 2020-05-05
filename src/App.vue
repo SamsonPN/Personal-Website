@@ -44,6 +44,7 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: var(--primary-font);
     cursor: url('./assets/images/WD.png'), auto;
   }

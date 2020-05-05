@@ -1,16 +1,25 @@
 <template>
     <div class="ProjectSections">
+        <div class="projectDesc">
+            <span>
+                <a 
+                    :href="website" 
+                    :title="'Go to ' + name">
+                    {{name}}
+                    <img 
+                        src="../../assets/images/link.svg" 
+                        alt="Link" 
+                    />
+                </a>
+            </span>
+            <p>{{description}}</p>
+        </div>
+
         <div class="projectWrapper">
             <div class="vidWrapper">
                 <video :src="video" autoplay loop muted></video>
             </div>
             <div class="projectInfo">
-                <a 
-                    :href="website" 
-                    :title="'Go to ' + name">
-                    {{name}}
-                </a>
-                <p>{{description}}</p>
                 <Demos 
                     :demo="demo" 
                     :source="source" 
@@ -56,7 +65,7 @@
 <script>
 import Demos from './ProjectsDemo';
 import Tag from '../TechTag';
-import Info from '../info.js';
+import Info from '../../info.js';
 
 export default {
     name: 'ProjectSections',
@@ -113,38 +122,30 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
-        > .projectWrapper {
-            width: calc(100% - 50px);
-            display: flex;
-            justify-content: space-between;
-            margin: 25px 0px;
-            > .vidWrapper {
-                width: 54%;
-                > video {
-                    max-width: 100%;
-                    border-radius: 10px;
-                }
-            }
-        }
     }
 
-    .projectInfo {
-        width: 44%;
+    .projectDesc {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        > a {
-            margin-bottom: 10px;
-            line-height: 0.775;
+        margin: 1.5rem 0;
+        > span > a {
+            margin-bottom: 1rem;
             text-decoration: none;
             letter-spacing: 2px;
             font-size: 5em;
             color: white;
-            &:hover {
-                text-decoration: underline;
+            > img {
+                max-width: 2rem;
+                vertical-align: baseline;
+                filter: grayscale(100%) opacity(0.5);
+                transition: 0.5s ease;
+            }
+            &:hover > img {
+                filter: grayscale(0%) opacity(1);
             }
         }
         > p {
-            margin-bottom: 25px;
             font: {
                 family: var(--secondary-font);
                 size: 2.5em;
@@ -154,11 +155,32 @@ export default {
         }
     }
 
+    .projectWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        > .vidWrapper {
+            width: 54%;
+            > video {
+                max-width: 100%;
+                border: 3px solid white;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .projectInfo {
+        width: 44%;
+        display: flex;
+        flex-direction: column;
+    }
+
     .tagWrapper {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        padding: 5px;
+        padding: 0.3rem;
         border: 2px solid white;
         border-radius: 10px;
         background-color: #358101;
@@ -168,36 +190,132 @@ export default {
     }
 
     .listWrapper {
-        width: calc(100% - 50px);
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-bottom: 25px;
+        margin-bottom: 1.5rem;
         padding: 10px;
         border: 3px solid white;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         list-style-position: inside;
         background-color: rgba(0,0,0, 0.5);
         > h3 {
             font-size: 2.25em;
         }
         > ul {
+            width: 100%;
             list-style-image: url('../../assets/images/terminal.svg');
-            margin-left: 15px;
-            margin-bottom: 10px;
+            margin: 0 0 0.625rem 1rem;
             font: {
                 family: var(--secondary-font);
                 size: 1.75em;
                 weight: 100;
                 style: italic;
             }
-            width: 100%;
             > li {
                 width: calc(100% - 20px);
-                margin-bottom: 10px;
+                margin-bottom: 0.625px;
             }
         }
     }
 
-    @include for-projects-desktop;
+
+    @include for-desktop-large {
+        .projectDesc {
+            > span > a {
+                font-size: 6.25vw;
+                margin-bottom: 1.5rem;
+                > img { max-width: 3rem; }
+            }
+            > p { font-size: 3vw; }
+        }
+
+        .tagWrapper {
+            border-width: 2.5px;
+            > .tag{
+                font-size: 2.5vw;
+                border-width: 2px;
+            }
+        }
+
+        .listWrapper {
+            padding: 1rem;
+            > h3 {
+                font-size: 2.75vw;
+            }
+            > ul {
+                font-size: 2.25vw;
+                list-style-image: url('../../assets/images/terminal-large.svg');
+            }
+        }
+    }
+
+    @include for-desktop-xlarge {
+        .projectWrapper > .vidWrapper > video,
+        .listWrapper,
+        .tagWrapper {
+            border: {
+                radius: 1.75rem;
+                width: 5px;
+            }
+        }
+
+        .listWrapper > ul {  list-style-image: url('../../assets/images/terminal-xlarge.svg'); }
+
+        .tagWrapper { 
+            padding: 0.625rem; 
+            > .tag {
+                margin: 0.625rem;
+            }
+        }
+    }
+
+    @include for-desktop-only { 
+        .ProjectSections {
+            > .projectWrapper {
+                flex-direction: column-reverse;
+                align-items: center;
+                > .vidWrapper { width: 100%; }
+            }
+        }
+
+        .projectInfo {
+            width: 100%;
+            > a { font-size: 6em; }
+            > p { font-size: 3em; }
+        }
+
+        .tagWrapper { margin-bottom: 1.5rem; }
+
+        .listWrapper {
+            > h3 { font-size: 2.75em; }
+            > ul { font-size: 2em; }
+        }
+    }
+
+    @include for-tablet-small-only {
+        .projectDesc {
+            > span > a {  
+                font-size: 12.5vw; 
+                > img { max-width: 1.5rem; }
+            }
+            > p { font-size: 7vw;  }
+        }  
+
+        .listWrapper {
+            > h3 { font-size: 8vw; }
+            > ul {
+                margin-left: 0.5rem; 
+                padding: 0;
+                font-size: 6.75vw; 
+            }
+        }
+    }
+
+    @include for-mobile-only { 
+        .tagWrapper > .tag {
+            font-size: 4vw;
+        }
+    }
 </style>

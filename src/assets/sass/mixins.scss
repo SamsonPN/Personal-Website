@@ -1,140 +1,36 @@
-@mixin for-desktop-large {
-    @media only screen and (min-width: 120em) { //1920
-        @content;
-    }
-}
+@import './globals.scss';
 
+// 2560px
 @mixin for-desktop-xlarge {
-    @media only screen and (min-width: 160em) { //2560
+    @media only screen and (min-width: $desktop-xlarge) {
         @content;
     }
 }
 
-@mixin for-projects-desktop {
-
-    @include for-desktop-large {
-        .projectInfo {
-            > a {
-                font-size: 8vw;
-                margin-bottom: 25px;
-            }
-            > p {
-                font-size: 3vw;
-            }
-        }
-
-        .tagWrapper {
-            border-width: 2.5px;
-            > .tag{
-                font-size: 2.5vw;
-                border-width: 2px;
-            }
-        }
-
-        .listWrapper {
-            padding: 15px;
-            > h3 {
-                font-size: 2.75vw;
-            }
-            > ul {
-                font-size: 2.25vw;
-                list-style-image: url('../../assets/images/terminal-large.svg');
-            }
-        }
+// 1920px
+@mixin for-desktop-large {
+    @media only screen and (min-width: $desktop-large) {
+        @content;
     }
+}
 
-    @include for-desktop-xlarge {
-        .listWrapper > ul{
-            list-style-image: url('../../assets/images/terminal-xlarge.svg');
-        }
+// 1024px
+@mixin for-desktop-only {
+    @media only screen and (max-width: $desktop) {
+        @content;
     }
+}
 
-    @media only screen and (max-width: 84.625em) { //1354
-        .projectInfo {
-            > a {
-                line-height: 1;
-                font-size: 4.25em;
-            }
-            > p {
-                font-size: 2.125em;
-            }
-        }
-
-        .tagWrapper > .tag {
-            font-size: 1.25em;
-        }
+// 600px
+@mixin for-tablet-small-only {
+    @media only screen and (max-width: $tablet-small) {
+        @content;
     }
+}
 
-    @media only screen and (max-width: 66.313em) { //1061
-        .ProjectSections {
-            > .projectWrapper {
-                width: 100%;
-                flex-direction: column-reverse;
-                align-items: center;
-                > .vidWrapper {
-                    width: calc(100% - 50px);
-                }
-            }
-        }
-
-        .projectInfo {
-            width: calc(100% - 50px);
-            > a { font-size: 6em; }
-            > p { font-size: 3em; }
-        }
-
-        .tagWrapper {
-            margin-bottom: 25px;
-        }
-
-        .listWrapper {
-            > h3 {
-                font-size: 2.75em;
-            }
-            > ul {
-                font-size: 2em;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 42.375em) { //678px
-        .projectInfo {
-            align-items: center;
-            text-align: center;
-            > a { 
-                font-size: 4.5em; 
-            }
-            > p {
-                font-size: 2.25em; 
-            }
-        }
-    }
-
-    @media only screen and (max-width: 28.125em) { //450px
-        .ProjectSections {
-            > .projectWrapper > .vidWrapper {
-                    width: calc(100% - 10px);
-            }
-        }
-
-        .projectInfo {
-            width: calc(100% - 10px);
-            > a {
-                font-size: 4em;
-            }
-            > p {
-                font-size: 1.75em;
-            }
-        }
-        .listWrapper {
-            width: calc(100% - 10px);
-            > h3 {
-                font-size: 2em;
-            }
-            > ul {
-                font-size: 1.5em;
-                margin-left: 0px;
-            }
-        }
+// 480px
+@mixin for-mobile-only {
+    @media only screen and (max-width: $mobile) {
+        @content;
     }
 }

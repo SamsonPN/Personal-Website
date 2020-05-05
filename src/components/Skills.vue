@@ -25,7 +25,7 @@
 <script>
 import Tag from './TechTag';
 import Isotope from 'isotope-layout';
-import Info from './info.js';
+import Info from '../info.js';
 
 export default {
     name: 'Skills',
@@ -79,20 +79,19 @@ export default {
     @import '../assets/sass/mixins.scss';
 
     #skills {
-        width: 100%;
+        width: calc(100% - 50px);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 25px;
+        margin-top: 1.5rem;
         color: white;
         background-color: var(--primary-color);
         > h1 {
-            width: calc(100% - 50px);
-            margin: 0 25px;
+            width: 100%;
             border-bottom: 3px solid white;
             font: {
-                size: 4em;
+                size: 5em;
                 weight: 200;
                 style: italic;
             }
@@ -100,18 +99,17 @@ export default {
     }
 
     .skillsBar {
-        width: calc(100% - 50px);
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 25px;
+        margin-top: 1.5rem;
         > div {
             outline: none;
             background-color: white;
             border: 2px solid #707070;
-            border-radius: 50px;
-            margin-left: 15px;
-            margin-bottom: 10px;
-            padding: 5px 30px;
+            border-radius: 3.125rem;
+            margin: 0 1rem 0.75rem 0;
+            padding: 0.375rem 2rem;
             color: var(--secondary-color);
             cursor: pointer;
             font: {
@@ -135,24 +133,24 @@ export default {
 
     #tagsGrid {
         position: relative;
-        width: calc(100% - 50px);
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         border: 2px solid white;
-        border-radius: 10px;
-        margin-top: 15px;
-        padding: 10px;
+        border-radius: 0.625em;
+        margin-top: 1rem;
+        padding: 0.625rem;
         background-color: #358101;
         transition: height 0.25s;
         > .tag {
             font-size: 3em;
-            margin: 7.5px;
+            margin: 0.5rem;
         }
     }
 
     @include for-desktop-large {
         #skills > h1 {
-            font-size: 5vw;
+            font-size: 7vw;
         }
 
         .skillsBar > div {
@@ -198,7 +196,7 @@ export default {
             justify-items: center;
             > div {
                 width: 100%;
-                margin-left: 0;
+                margin-right: 0;
             }
         }
         #tagsGrid {
@@ -210,16 +208,10 @@ export default {
     }
 
 
-    @media only screen and (max-width: 28.125em) {
-        #skills {
-            align-items: center;
-            > h1 {
-                width: calc(100% - 10px);
-            }
-        }
-
-        .skillsBar, #tagsGrid {
-            width: calc(100% - 10px);
+    @include for-mobile-only {
+        #skills { 
+            width: 95%; 
+            > h1 { font-size: 15vw; }
         }
     }
 </style>
