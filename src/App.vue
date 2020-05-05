@@ -45,7 +45,7 @@ export default {
     display: flex;
     flex-direction: column;
     font-family: var(--primary-font);
-    cursor: url('./assets/WD.png'), auto;
+    cursor: url('./assets/images/WD.png'), auto;
   }
 
 </style>

@@ -106,7 +106,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import '../mixins.scss';
+    @import '../../assets/sass/mixins.scss';
 
     .ProjectSections {
         width: 100%;
@@ -182,7 +182,7 @@ export default {
             font-size: 2.25em;
         }
         > ul {
-            list-style-image: url('../../assets/terminal.svg');
+            list-style-image: url('../../assets/images/terminal.svg');
             margin-left: 15px;
             margin-bottom: 10px;
             font: {

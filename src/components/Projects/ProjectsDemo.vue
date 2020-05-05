@@ -12,12 +12,21 @@
 <script>
 export default {
     name: 'Demo',
-    props: ['demo', 'source']
+    props: {
+        demo: {
+            type: String,
+            required: true
+        },
+        source: {
+            type: String,
+            required: true
+        }
+    }
 }
 </script>
 
 <style scoped lang="scss">
-    @import '../mixins.scss';
+    @import '../../assets/sass/mixins.scss';
 
     #demo {
         width: 100%;

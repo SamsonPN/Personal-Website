@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    @import './mixins.scss';
+    @import '../assets/sass/mixins.scss';
 
     #landing {
         width: 100%;

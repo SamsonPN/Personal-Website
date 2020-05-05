@@ -15,8 +15,8 @@ module.exports = {
             "Create, update, or delete facebook-like status updates to track fitness journey",
             "Able to upload photos/videos for each status that will be delivered quickly through a CDN"
         ],
-        'challenges': [1, 2, 3, 4],
-        'solutions': [1, 2, 3, 4]
+        'challenges': [1, 2],
+        'solutions': [1, 2]
     },
     'legion': {
         'name': 'Legion Board',
@@ -32,8 +32,8 @@ module.exports = {
             "Has a variety of options to change the color of the pieces and grid, add gridlines, and change the pieces' shapes",
             "Positions of the pieces on the grid are saved and players can have multiple presets to save to"
         ],
-        'challenges': [1, 2, 3, 4],
-        'solutions': [1, 2, 3, 4]
+        'challenges': [1, 2],
+        'solutions': [1, 2]
     },
     'wordsearch': {
         'name': 'Word Search',
@@ -49,8 +49,8 @@ module.exports = {
             "Created word searches will be saved to your browser automatically",
             "Enter in any word searches you find on the internet and we can solve them in a couple seconds"
         ],
-        'challenges': [1, 2, 3, 4],
-        'solutions': [1, 2, 3, 4]
+        'challenges': [1, 2],
+        'solutions': [1, 2]
     },
     'stack': {
         'React': 'Front-End',

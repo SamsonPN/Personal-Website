@@ -76,7 +76,7 @@ export default {
 
 
 <style scoped lang="scss">
-    @import './mixins.scss';
+    @import '../assets/sass/mixins.scss';
 
     #skills {
         width: 100%;

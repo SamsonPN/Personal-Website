@@ -38,14 +38,14 @@
             }
             > ul {
                 font-size: 2.25vw;
-                list-style-image: url('../../assets/terminal-large.svg');
+                list-style-image: url('../../assets/images/terminal-large.svg');
             }
         }
     }
 
     @include for-desktop-xlarge {
         .listWrapper > ul{
-            list-style-image: url('../../assets/terminal-xlarge.svg');
+            list-style-image: url('../../assets/images/terminal-xlarge.svg');
         }
     }
 
