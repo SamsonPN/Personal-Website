@@ -27,8 +27,8 @@ export default {
     --secondary-font: 'Roboto', sans-serif;
     --primary-color: #013581;
     --secondary-color: #810175;
-
   }
+  
   html, body {
     font-size: 100%;
     background-color: var(--primary-color);

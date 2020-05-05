@@ -7,7 +7,12 @@
 <script>
 export default {
     name: 'TechTag',
-    props: ['tag']
+    props: {
+        tag: {
+            type: String,
+            required: true
+        }
+    }
 }
 </script>
 

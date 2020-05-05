@@ -1,57 +1,53 @@
 <template>
-    <div id="ProjectOne" >
+    <div class="ProjectSections">
         <div class="projectWrapper">
             <div class="vidWrapper">
                 <video :src="video" autoplay loop muted></video>
             </div>
             <div class="projectInfo">
-                <a href="https://abetteruhealth.com" title="Go to A Better U?">A Better U</a>
-                <p>Health and Fitness Application</p>
-                <Demos :demo="demo" :source="source" />
+                <a 
+                    :href="website" 
+                    :title="'Go to ' + name">
+                    {{name}}
+                </a>
+                <p>{{description}}</p>
+                <Demos 
+                    :demo="demo" 
+                    :source="source" 
+                />
                 <div class="tagWrapper">
-                    <Tag v-for="tech in stack" :key="tech" :tag="tech"/>
+                    <Tag 
+                        v-for="tech in stack" 
+                        :key="tech" 
+                        :tag="tech"
+                    />
                 </div>
             </div>
         </div>
         <div class="listWrapper">
             <h3>Features</h3>
             <ul class="featuresList">
-                <li>
-                    Create any workout routine from 1000 available exercises such as
-                    the squat, bench press, and deadlift
-                </li>
-                <li>
-                    Track workouts for the day by choosing a routine and putting in
-                    weight, repetition, and set information
-                </li>
-                <li>
-                    Provides Calorie and Macronutrient calculators for users 
-                    to determine nutritional needs
-                </li>
-                <li>
-                    Search for various foods and view full nutrition report
-                </li>
-                <li>
-                    Create, update, or delete facebook-like status updates to track fitness journey
-                </li>
-                <li>
-                    Able to upload photos/videos for each status that will
-                    be delivered quickly through a CDN
+                <li
+                    v-for="feature in features"
+                    :key="feature">
+                    {{feature}}
                 </li>
             </ul>
             <h3>Challenges</h3>
             <ul class="challengesList">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+                <li
+                    v-for="challenge in challenges"
+                    :key="challenge">
+                    {{challenge}}
+                </li>
             </ul>
             <h3>Solutions</h3>
             <ul class="solutionsList">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+                <li
+                    v-for="solution in solutions"
+                    :key="solution">
+                    {{solution}}
+                </li>
             </ul>
         </div>
   </div>
@@ -60,19 +56,50 @@
 <script>
 import Demos from './ProjectsDemo';
 import Tag from '../TechTag';
+import Info from '../info.js';
 
 export default {
-    name: 'ProjectOne',
+    name: 'ProjectSections',
+    props: {
+        project: {
+            type: String,
+            required: true,
+        }
+    },
     components: {
         Demos,
         Tag
     },
-    data() {
-        return {
-            demo: 'https://youtu.be/xnnKvFZoiVo',
-            source: 'https://github.com/SotaSamson96/A-Better-U',
-            stack: ['React', 'Node.js', 'Express', 'MongoDB'],
-            video: 'https://res.cloudinary.com/sotasamson96/video/upload/v1586055782/Personal%20Website/ABU_Short_btkni4.mp4'
+    computed: {
+        name: function() {
+            return Info[this.project].name
+        },
+        description: function() {
+            return Info[this.project].description
+        },
+        website: function() {
+            return Info[this.project].website
+        },
+        demo: function() {
+            return Info[this.project].demo
+        },
+        source: function() {
+            return Info[this.project].source
+        },
+        video: function() {
+            return Info[this.project].video
+        },
+        stack: function() {
+            return Info[this.project].stack
+        },
+        features: function() {
+            return Info[this.project].features
+        },
+        challenges: function() {
+            return Info[this.project].challenges
+        },
+        solutions: function() {
+            return Info[this.project].solutions
         }
     }
 }
@@ -81,7 +108,7 @@ export default {
 <style scoped lang="scss">
     @import '../mixins.scss';
 
-    #ProjectOne {
+    .ProjectSections {
         width: 100%;
         display: flex;
         flex-direction: column;

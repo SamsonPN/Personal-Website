@@ -1,20 +1,19 @@
 <template>
     <div id="projects">
         <h1>Projects</h1>
-        <ProjectOne />
-        <ProjectTwo />
+        <ProjectSections project="abetteru" />
+        <ProjectSections project="legion" />
+        <ProjectSections project="wordsearch" />
   </div>
 </template>
 
 <script>
-import ProjectOne from './ProjectOne';
-import ProjectTwo from './ProjectTwo';
+import ProjectSections from './ProjectSections';
 
 export default {
     name: 'Landing',
     components: {
-        ProjectOne,
-        ProjectTwo
+        ProjectSections
     }
 }
 </script>

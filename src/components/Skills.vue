@@ -17,7 +17,7 @@
                 :class="[category]"
                 :key="tech"
                 :tag="tech"
-                />
+            />
         </div>
   </div>
 </template>
@@ -25,6 +25,7 @@
 <script>
 import Tag from './TechTag';
 import Isotope from 'isotope-layout';
+import Info from './info.js';
 
 export default {
     name: 'Skills',
@@ -34,32 +35,12 @@ export default {
     data() {
         return {
             skills: ['All', 'Front-End', 'Back-End', 'Cloud', 'Other'],
-            current: 'All',
-            stack: {
-                'React': 'Front-End',
-                'Node.js': 'Back-End',
-                'Express': 'Back-End',
-                'Vue.js': 'Front-End',
-                'JavaScript': ['Front-End', 'Back-End'],
-                'HTML': 'Front-End',
-                'CSS': 'Front-End',
-                'MongoDB': 'Back-End',
-                'PostgresQL': 'Back-End',
-                'SQLite': 'Back-End',
-                'SCSS': 'Front-End',
-                'Jest': 'Other',
-                'Vuex': 'Front-End',
-                'Netlify': 'Cloud',
-                'Heroku': 'Cloud',
-                'Firebase': 'Back-End',
-                'Bootstrap': 'Front-End',
-                'jQuery': 'Front-End',
-                'Python': 'Back-End',
-                'MongoDB Atlas': 'Cloud',
-                'Cloudinary API': 'Cloud',
-                'Adobe XD': 'Other',
-                'React Context API': 'Front-End'
-            }
+            current: 'All'
+        }
+    },
+    computed: {
+        stack: function() {
+            return Info['stack'];
         }
     },
     methods: {
