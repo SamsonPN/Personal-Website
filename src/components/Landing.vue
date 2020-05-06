@@ -99,10 +99,10 @@ export default {
 
     @keyframes slidein {
         0% {
-            transform: translateY(-1000%);
+            transform: translateY(-1500%);
         }
         20% {
-            transform: translateY(-1000%);
+            transform: translateY(-1500%);
         }
     }
 
@@ -223,6 +223,10 @@ export default {
     @include for-mobile-only {
         #socialMediaWrapper > a {
             width: 17.5%;
+        }
+
+        #navHeader > p:first-child{
+            margin-right: 0.75rem;
         }
     }
 </style>
