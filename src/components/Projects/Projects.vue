@@ -46,6 +46,12 @@ export default {
         }
     }
 
+    @include for-desktop-xlarge {
+        #projects > h1 {
+            border-width: 5px;
+        }
+    }
+
     @include for-mobile-only {
         #projects {
             width: 95%;

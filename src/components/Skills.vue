@@ -34,7 +34,7 @@ export default {
     },
     data() {
         return {
-            skills: ['All', 'Front-End', 'Back-End', 'Cloud', 'Other'],
+            skills: ['All', 'Front-End', 'Back-End', 'Other'],
             current: 'All'
         }
     },
@@ -155,58 +155,56 @@ export default {
 
         .skillsBar > div {
             font-size: 4vw;
-            border-radius: 75px;
+            border-radius: 5rem;
             border-width: 3px;
         }
 
         #tagsGrid > .tag {
             font-size: 4vw;
-            margin: 15px;
-            border-radius: 10px;
+            margin: 1rem;
+            border-radius: 0.625rem;
         }
     }
 
-    @media only screen and (max-width: 80.938em) {
-        .skillsBar {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            > div {
-                text-align: center;
-            }
-        }
-    }
-
-    @media only screen and (max-width: 65.313em) {
-        .skillsBar {
-            grid-template-columns: repeat(2, 1fr);
-            > div {
-                font-size: 5.5vw;
-            }
+    @include for-desktop-xlarge {
+        #skills > h1 {
+            border-width: 5px;
         }
 
-        #tagsGrid > .tag {
-            font-size: 2em;
-        }
-    }
-
-    @media only screen and (max-width: 34.688em) {
-        .skillsBar {
-            margin-top: 10px;
-            grid-template-columns: repeat(1, 1fr);
-            justify-items: center;
-            > div {
-                width: 100%;
-                margin-right: 0;
-            }
+        .skillsBar > div {
+            border-width: 5px;
         }
         #tagsGrid {
-            margin-top: 0px;
-            > .tag {
-                font-size: 1.5em;
+            border: {
+                width: 5px;
+                radius: 1.5rem;
             }
         }
     }
 
+    @include for-desktop-only {
+        .skillsBar {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            > div {
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+        }
+    }
+
+    @include for-tablet-only {
+        .skillsBar > div {
+            font-size: 9vw;
+        }
+        #tagsGrid > .tag {
+            font-size: 5vw;
+            margin: 0.25rem;
+            padding: 0.5rem;
+        }
+    }
 
     @include for-mobile-only {
         #skills { 

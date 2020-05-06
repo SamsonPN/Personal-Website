@@ -21,6 +21,13 @@
     }
 }
 
+// 768px
+@mixin for-tablet-only {
+    @media only screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
 // 600px
 @mixin for-tablet-small-only {
     @media only screen and (max-width: $tablet-small) {
