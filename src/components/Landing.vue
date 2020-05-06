@@ -144,7 +144,7 @@ export default {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 0 25px;
+        padding: 0 1.5rem;
         z-index: 1;
         animation: {
             duration: 1s;
@@ -159,7 +159,7 @@ export default {
                 style: italic;
             }
             &:first-child {
-                margin-right: 25px;
+                margin-right: 1.5rem;
             }
             &:hover {
                 text-decoration: underline;
@@ -180,36 +180,31 @@ export default {
         }
         #navHeader > p {
             font-size: 3vw;
+            &:first-child {
+                margin-right: 2.25rem;
+            }
         }
     }
 
-    @media only screen and (max-width: 50em) {
+    @include for-desktop-only {
         #infoWrapper > p{
             &:first-child {
-                font-size: 5em;
+                font-size: 12vw;
             }
             &:nth-child(2) {
-                font-size: 3em;
+                font-size: 8vw;
             }
         }
 
         #navHeader > p{
-            font-size: 2.25em;
+            font-size: 5.5vw;
         }
     }
 
-    @media only screen and (max-width: 37.188em) {
+    @include for-tablet-small-only {
         #infoWrapper {
             align-items: center;
-            > p {
-                text-align: center;
-                &:first-child {
-                    font-size: 3.5em;
-                }
-                &:nth-child(2) {
-                    font-size: 1.5em;
-                }
-            }
+            text-align: center;
         }
 
         #socialMediaWrapper {
@@ -225,24 +220,9 @@ export default {
         }
     }
 
-    @media only screen and (max-width: 26em) {
-        #infoWrapper > p {
-            &:first-child {
-                font-size: 25vw;
-            }
-            &:nth-child(2) {
-                font-size: 10vw;
-            }
-        }
-
+    @include for-mobile-only {
         #socialMediaWrapper > a {
             width: 17.5%;
-        }
-    }
-
-    @media only screen and (max-width: 20em) {
-        #navHeader {
-            justify-content: center;
         }
     }
 </style>
