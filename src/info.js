@@ -81,7 +81,6 @@ module.exports = {
         'CSS': 'Front-End',
         'MongoDB': 'Back-End',
         'PostgresQL': 'Back-End',
-        'SQLite': 'Back-End',
         'SCSS': 'Front-End',
         'Jest': 'Other',
         'Vuex': 'Front-End',
@@ -89,7 +88,6 @@ module.exports = {
         'Bootstrap': 'Front-End',
         'jQuery': 'Front-End',
         'Python': 'Back-End',
-        'Cloudinary API': 'Other',
         'Adobe XD': 'Other',
         'React Context API': 'Front-End',
         'CSS Modules': 'Front-End'

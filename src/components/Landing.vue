@@ -26,7 +26,7 @@
                         alt="gmail icon" 
                         title="Gmail">
                 </a>
-                <a href="https://google.com">
+                <a href="https://docs.google.com/document/d/151uofHjC3giaovj-fnXDm9S0r4CU56vfKn9nd88Fv5U/edit?usp=sharing">
                     <img 
                         src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/RESUME_kgzpmp.svg" 
                         alt="resume icon" 
