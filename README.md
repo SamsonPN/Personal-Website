@@ -1,4 +1,8 @@
-# mywebsite
+# Personal Website
+
+## Website: samsonn.com
+
+![Personal Website](https://res.cloudinary.com/sotasamson96/image/upload/v1588895803/Personal%20Website/personal_website_zecdvn.png)
 
 ## Project setup
 ```
