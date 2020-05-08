@@ -2,6 +2,8 @@
 
 ## Website: https://www.samsonn.com
 
+## Technologies Used: Vue.js, SCSS, Isotope
+
 ![Personal Website](https://res.cloudinary.com/sotasamson96/image/upload/v1588895803/Personal%20Website/personal_website_zecdvn.png)
 
 ## Project setup
