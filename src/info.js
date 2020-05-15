@@ -88,8 +88,10 @@ module.exports = {
         'Bootstrap': 'Front-End',
         'jQuery': 'Front-End',
         'Python': 'Back-End',
+        'SQL': 'Back-End',
         'Adobe XD': 'Other',
         'React Context API': 'Front-End',
-        'CSS Modules': 'Front-End'
+        'CSS Modules': 'Front-End',
+        'Bash': 'Other'
     }
 }
