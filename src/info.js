@@ -4,7 +4,7 @@ module.exports = {
         'description': 'Health and Fitness Application',
         'website': 'https://abetteruhealth.com',
         'demo': 'https://youtu.be/xnnKvFZoiVo',
-        'source': 'https://github.com/SotaSamson96/A-Better-U',
+        'source': 'https://github.com/SamsonPN/A-Better-U',
         'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586055782/Personal%20Website/ABU_Short_btkni4.mp4',
         'stack': ['React', 'Node.js', 'Express', 'MongoDB'],
         'features': [
@@ -29,7 +29,7 @@ module.exports = {
         'description': 'MapleStory Legion Simulator',
         'website': 'https://legion.samsonn.com',
         'demo': 'https://youtu.be/lpfKuMfuXRI',
-        'source': 'https://github.com/SotaSamson96/Legion',
+        'source': 'https://github.com/SamsonPN/Legion',
         'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4',
         'stack': ['Vue.js', 'SCSS', 'Node.js', 'Express', 'PostgresQL'],
         'features': [
@@ -52,7 +52,7 @@ module.exports = {
         'description': 'Create, Play, and Solve Word Searches',
         'website': 'https://wordsearch.samsonn.com',
         'demo': 'https://youtu.be/AvhDpE8cP-8',
-        'source': 'https://github.com/SotaSamson96/Word-Search',
+        'source': 'https://github.com/SamsonPN/Word-Search',
         'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1588638917/Personal%20Website/DEMO_2_x3sf1d.mov',
         'stack': ['React', 'Redux', 'SCSS', 'CSS Modules'],
         'features': [
