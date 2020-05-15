@@ -8,7 +8,7 @@
             <p>Samson Nguyen</p>
             <p>Full-Stack Developer</p>
             <div id="socialMediaWrapper">
-                <a href="https://github.com/SotaSamson96">
+                <a href="https://github.com/SamsonPN">
                     <img 
                         src="https://res.cloudinary.com/sotasamson96/image/upload/v1586300978/Personal%20Website/GITHUB_a6qbr3.svg" 
                         alt="github icon" 
