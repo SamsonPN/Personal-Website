@@ -11,6 +11,7 @@
     "core-js": "^3.6.4",
     "http-proxy": "^1.18.1",
     "isotope-layout": "^3.0.6",
+    "node-forge": "^0.10.0",
     "serialize-javascript": "^5.0.0",
     "vue": "^2.6.11"
   },
