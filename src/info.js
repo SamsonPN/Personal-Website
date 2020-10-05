@@ -2,7 +2,7 @@ module.exports = {
     'abetteru': {
         'name': 'A Better U',
         'description': 'Health and Fitness Application',
-        'website': 'https://abetteruhealth.com',
+        'website': 'https://abetteru.samsonn.com',
         'demo': 'https://youtu.be/xnnKvFZoiVo',
         'source': 'https://github.com/SamsonPN/A-Better-U',
         'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586055782/Personal%20Website/ABU_Short_btkni4.mp4',
