@@ -16,7 +16,7 @@ module.exports = {
             "Able to upload photos/videos for each status that will be delivered quickly through a CDN"
         ],
         'challenges': [
-            'Working with a NoSQL database like MongoDB was quite challenging at first. This was because it was difficult coming up with an appropriate schema to represent data that was inherently relational. It would’ve been much easier to use a SQL DBMS like PostgresQL or MySQL but I wanted to challenge myself with something new.',
+            'Working with a NoSQL database like MongoDB was quite challenging at first. This was because it was difficult coming up with an appropriate schema to represent data that was inherently relational. It would’ve been much easier to use a SQL DBMS like PostgreSQL or MySQL but I wanted to challenge myself with something new.',
             'Figuring out a way to allow users to upload and display images quickly for status updates was also another challenge. I initially used MongoDB’s GridFS specification to store media but that was inefficient and slow for videos and high quality images since it broke the files into chunks and each chunk into a document. In addition, GridFS should only be used for files larger than 16 MB and most of the images I uploaded were less than 10 MB.'
         ],
         'solutions': [
@@ -31,7 +31,7 @@ module.exports = {
         'demo': 'https://youtu.be/lpfKuMfuXRI',
         'source': 'https://github.com/SamsonPN/Legion',
         'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4',
-        'stack': ['Vue.js', 'SCSS', 'Node.js', 'Express', 'PostgresQL'],
+        'stack': ['Vue.js', 'SCSS', 'Node.js', 'Express', 'PostgreSQL'],
         'features': [
             "Allows players to drag and drop tetris pieces onto the grid",
             "Tetris pieces can be rotated clockwise and counterclockwise, as well as flipped vertically and horizontally",
@@ -80,7 +80,7 @@ module.exports = {
         'HTML': 'Front-End',
         'CSS': 'Front-End',
         'MongoDB': 'Back-End',
-        'PostgresQL': 'Back-End',
+        'PostgreSQL': 'Back-End',
         'SCSS': 'Front-End',
         'Jest': 'Other',
         'Vuex': 'Front-End',
