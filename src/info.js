@@ -1,4 +1,27 @@
 module.exports = {
+    'legion': {
+        'name': 'Legion Board',
+        'description': 'MapleStory Legion Simulator',
+        'website': 'https://legion.samsonn.com',
+        'demo': 'https://youtu.be/lpfKuMfuXRI',
+        'source': 'https://github.com/SamsonPN/Legion',
+        'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4',
+        'stack': ['Vue.js', 'SCSS', 'Node.js', 'Express', 'PostgreSQL'],
+        'features': [
+            "Allows players to drag and drop tetris pieces onto the grid",
+            "Tetris pieces can be rotated clockwise and counterclockwise, as well as flipped vertically and horizontally",
+            "Can dynamically change the colors of the grid and pieces as well as add gridlines using CSS variables",
+            "Positions of the pieces on the grid are saved and players can have multiple presets to save to"
+        ],
+        'challenges': [
+            'Recreating the drag and drop behavior of the in-game grid was quite difficult. It wasn’t as simple as just appending an element into a div. This is because there were edge cases in which portions of the tetris piece were hanging off the grid depending on its rotation (90º, -90º, etc). In game, those portions would not be displayed unless it was rotated back into the grid’s area.',
+            'Creating a universal tetris piece that accommodated all shapes and sizes was quite difficult. There are 5 character archetypes in the game and each archetype has its own shape. In addition, the levels of each character determine how large a tetris piece is. For example, a Mage archetype has a T-shaped piece while a Warrior archetype has a square-shaped piece and a level 200 character is a 4-piece while a level 250 character is a 5-piece shape.' 
+        ],
+        'solutions': [
+            'The solution for the drag and drop was to simply render the piece’s icon inside the cell and color in adjacent cells according to the positions of its side pieces. This solved 2 issues: 1) rotating the pieces was quite easy because all I had to do was recalculate the positions of the side pieces and color in the adjacent cells and 2) if a portion of the tetris piece was off the grid, it would not display but if rotated back in, it would display again. I just had to check whether the coordinates were within the boundaries of the grid.',
+            'The solution for the universal tetris piece was to create a 5x5 matrix where the middle position was the character’s icon and the adjacent cells would be colored in to create the piece. Thus, no matter the character archetype or level, this piece would accommodate them. In addition, this made rotating the piece about its center much easier since it just required recalculating and coloring in new cell positions rather than using transform: translate().'
+        ]
+    },
     'abetteru': {
         'name': 'A Better U',
         'description': 'Health and Fitness Application',
@@ -22,29 +45,6 @@ module.exports = {
         'solutions': [
             'I created several collections for each page of my application as well as a user collection to store user ids. The user id acted like a primary key that connected the user to their information in each collection. This mimicked the relational behavior in a SQL database. ',
             'The solution to image/video uploads was to use a cloud-based management system, like Cloudinary, to upload media and then serve it through a CDN. Using the Cloudinary API, I was able to upload and deliver media way faster than GridFS since it didn’t have to query through the database for each chunk of the media file and put it back together.'
-        ]
-    },
-    'legion': {
-        'name': 'Legion Board',
-        'description': 'MapleStory Legion Simulator',
-        'website': 'https://legion.samsonn.com',
-        'demo': 'https://youtu.be/lpfKuMfuXRI',
-        'source': 'https://github.com/SamsonPN/Legion',
-        'video': 'https://res.cloudinary.com/sotasamson96/video/upload/v1586145273/Personal%20Website/Legion_DEMO_bfosu6.mp4',
-        'stack': ['Vue.js', 'SCSS', 'Node.js', 'Express', 'PostgreSQL'],
-        'features': [
-            "Allows players to drag and drop tetris pieces onto the grid",
-            "Tetris pieces can be rotated clockwise and counterclockwise, as well as flipped vertically and horizontally",
-            "Can dynamically change the colors of the grid and pieces as well as add gridlines using CSS variables",
-            "Positions of the pieces on the grid are saved and players can have multiple presets to save to"
-        ],
-        'challenges': [
-            'Recreating the drag and drop behavior of the in-game grid was quite difficult. It wasn’t as simple as just appending an element into a div. This is because there were edge cases in which portions of the tetris piece were hanging off the grid depending on its rotation (90º, -90º, etc). In game, those portions would not be displayed unless it was rotated back into the grid’s area.',
-            'Creating a universal tetris piece that accommodated all shapes and sizes was quite difficult. There are 5 character archetypes in the game and each archetype has its own shape. In addition, the levels of each character determine how large a tetris piece is. For example, a Mage archetype has a T-shaped piece while a Warrior archetype has a square-shaped piece and a level 200 character is a 4-piece while a level 250 character is a 5-piece shape.' 
-        ],
-        'solutions': [
-            'The solution for the drag and drop was to simply render the piece’s icon inside the cell and color in adjacent cells according to the positions of its side pieces. This solved 2 issues: 1) rotating the pieces was quite easy because all I had to do was recalculate the positions of the side pieces and color in the adjacent cells and 2) if a portion of the tetris piece was off the grid, it would not display but if rotated back in, it would display again. I just had to check whether the coordinates were within the boundaries of the grid.',
-            'The solution for the universal tetris piece was to create a 5x5 matrix where the middle position was the character’s icon and the adjacent cells would be colored in to create the piece. Thus, no matter the character archetype or level, this piece would accommodate them. In addition, this made rotating the piece about its center much easier since it just required recalculating and coloring in new cell positions rather than using transform: translate().'
         ]
     },
     'wordsearch': {
@@ -72,11 +72,13 @@ module.exports = {
     },
     'stack': {
         'React': 'Front-End',
+        'React Native': 'Front-End',
         'Redux': 'Front-End',
         'Node.js': 'Back-End',
         'Express': 'Back-End',
         'Vue.js': 'Front-End',
         'JavaScript': ['Front-End', 'Back-End'],
+        'TypeScript': ['Front-End', 'Back-End'],
         'HTML': 'Front-End',
         'CSS': 'Front-End',
         'MongoDB': 'Back-End',
