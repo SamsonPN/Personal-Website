@@ -1,8 +1,8 @@
 <template>
     <div id="projects">
         <h1>Projects</h1>
-        <ProjectSections project="abetteru" />
         <ProjectSections project="legion" />
+        <ProjectSections project="abetteru" />
         <ProjectSections project="wordsearch" />
   </div>
 </template>
